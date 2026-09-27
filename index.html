@@ -34,6 +34,16 @@ li{margin-bottom:6px;font-size:.92rem}
 a{color:#1d4ed8}
 .legend{display:flex;gap:18px;font-size:.82rem;margin-bottom:6px}
 .sw{display:inline-block;width:22px;height:3px;vertical-align:middle;margin-left:6px;border-radius:2px}
+
+.compare{border-top:4px solid #1d4ed8}.compare-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:12px 0}.figure{border:1px solid #e5e7eb;border-radius:10px;padding:13px;min-width:0}.figure small,.figure span{display:block;color:#6b7280;font-size:.75rem}.figure strong{display:block;font-size:1.18rem;color:#1d4ed8;line-height:1.3;margin:5px 0;direction:ltr;text-align:right}.figure:nth-child(2) strong{color:#148477}.lead{font-size:.94rem;margin-bottom:16px}.compare details{border-top:1px solid #e5e7eb;padding:10px 0}.compare summary{font-weight:700;cursor:pointer}.compare .detail p{margin:10px 0;font-size:.89rem}.compare .detail{padding:1px 0 7px}.card:not(.compare) table{display:block;overflow-x:auto;white-space:nowrap;max-width:100%;-webkit-overflow-scrolling:touch}@media(max-width:390px){.figure strong{font-size:1.02rem}.figure{padding:10px}.compare-grid{gap:7px}}
+
+.calc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:14px}
+.calc-grid label{font-size:.78rem;color:#374151;font-weight:600;display:flex;flex-direction:column;gap:4px}
+.calc-grid input{font:inherit;font-size:1rem;padding:10px;border:1px solid #d1d5db;border-radius:10px;direction:ltr;text-align:left;min-height:44px;width:100%;background:#fff;color:#111827}
+.calc-grid input:focus{outline:2px solid #1d4ed8;outline-offset:-1px;border-color:#1d4ed8}
+.calc-res .compare-grid{margin:0 0 6px}
+.calc-res .figure{border-color:#dbe3f0;background:#f8fafc}
+@media(max-width:390px){.calc-grid{gap:7px}.calc-grid input{padding:8px;font-size:.95rem}}
 </style>
 </head>
 <body>
@@ -46,6 +56,49 @@ a{color:#1d4ed8}
 <p>מטר מרובע בדירה ממוצעת בנחלת יצחק עלה מ-<span class="num">21,130 ₪</span> ב-2010 ל-<span class="num">42,971 ₪</span> ב-2025: <b>פי 2.03 נומינלית</b>.</p>
 <p>אבל השקל של 2010 שווה <span class="num">1.29 ₪</span> של היום. אחרי ניקוי האינפלציה נשארת עלייה ריאלית של <span class="num">+61%</span> בלבד - כלומר כשליש מהעלייה "על הנייר" היא פשוט שחיקת השקל.</p>
 <p>והניואנס שאף כותרת לא תיתן: השיא הריאלי היה ב-2024. ב-2025 המחיר הריאלי <span class="down">ירד כ-10.5%</span>, בחזרה לרמת 2021.</p>
+</div>
+
+<div class="card compare" id="sp500">
+<h2>דירה או S&amp;P 500? אותו כסף, אותה קורת גג</h2>
+<p class="note" style="margin:0 0 12px">תרחיש היסטורי מסוף 2010 לסוף 2025, בשקלים נומינליים של סוף 2025. זו השוואת תזרים, לא תחזית או המלצה.</p>
+<div class="compare-grid"><div class="figure"><small>שוכר + משקיע במדד</small><strong>4.73 מיליון ₪</strong><span>שווי תיק S&amp;P 500 לאחר תשלום שכירות</span></div><div class="figure"><small>קונה + גר בדירה</small><strong>2.82 מיליון ₪</strong><span>שווי דירה בניכוי יתרת המשכנתא</span></div></div>
+<p class="lead">בתרחיש הזה, תיק המניות מסתיים בכ-<b>1.91 מיליון ₪ יותר</b>, למרות שלקונה יש דירה ששוויה עלה. מגורים לא היו "בחינם" אצל אף אחד: השוכר שילם שכירות, והקונה שילם ריבית, החזר קרן ואחזקת דירה. השכירות שנחסכה <b>כבר כלולה</b> בחשבון, ולא נספרת שוב כתשואה.</p>
+<div class="legend"><span><span class="sw" style="background:#1d4ed8"></span>שוכר + מדד</span><span><span class="sw" style="background:#16a085"></span>הון עצמי בדירה</span></div>
+<svg viewBox="0 0 590 245" style="display:block;width:100%;height:auto;direction:ltr" role="img" aria-label="הון מצטבר בשקלים: קונה דירה לעומת שוכר ומשקיע, 2010 עד 2025">
+<line x1="32" x2="575" y1="205.0" y2="205.0" stroke="#e5e7eb"/><text x="26" y="209.0" text-anchor="end" font-size="11" fill="#6b7280">0M</text><line x1="32" x2="575" y1="137.0" y2="137.0" stroke="#e5e7eb"/><text x="26" y="141.0" text-anchor="end" font-size="11" fill="#6b7280">2M</text><line x1="32" x2="575" y1="69.0" y2="69.0" stroke="#e5e7eb"/><text x="26" y="73.0" text-anchor="end" font-size="11" fill="#6b7280">4M</text><text x="32.0" y="232" text-anchor="middle" font-size="11" fill="#6b7280">2010</text><text x="213.0" y="232" text-anchor="middle" font-size="11" fill="#6b7280">2015</text><text x="394.0" y="232" text-anchor="middle" font-size="11" fill="#6b7280">2020</text><text x="575.0" y="232" text-anchor="middle" font-size="11" fill="#6b7280">2025</text><polyline points="32.0,187.8 68.2,185.3 104.4,180.8 140.6,174.0 176.8,164.1 213.0,162.9 249.2,157.3 285.4,150.6 321.6,148.0 357.8,134.4 394.0,125.7 430.2,105.3 466.4,114.1 502.6,81.8 538.8,52.2 575.0,44.1" fill="none" stroke="#1d4ed8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><polyline points="32.0,187.8 68.2,184.2 104.4,181.5 140.6,181.8 176.8,178.1 213.0,172.9 249.2,161.5 285.4,154.1 321.6,152.7 357.8,151.6 394.0,147.6 430.2,128.1 466.4,116.6 502.6,112.5 538.8,100.9 575.0,109.1" fill="none" stroke="#16a085" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<p class="note">סוף כל שנה · ציר אנכי במיליוני ₪. המדד כולל השקעה חוזרת של דיבידנדים; מסי רווח הון, מסי עסקה, דמי ניהול ועלות המרת מטבע לא נוכו.</p>
+<details><summary>איך שמרנו על אותה מסגרת כסף?</summary><div class="detail">
+<p>דוגמה לדירת 80 מ״ר: מחיר סוף 2010 מחושב לפי <span class="num">21,130 ₪/מ״ר</span>, כלומר <span class="num">1,690,400 ₪</span>. בקנייה: הון עצמי של 30% (<span class="num">507,120 ₪</span>) ומשכנתא של 70% (<span class="num">1,183,280 ₪</span>), בריבית שקלית קבועה לא צמודה של 4% לשנה ל-25 שנה. החזר חודשי קבוע <span class="num">6,246 ₪</span>; אחזקה/ביטוח/תיקונים כהנחת עבודה 0.8% משווי הקנייה לשנה (<span class="num">1,127 ₪/חודש</span>).</p>
+<p>במסלול השכירות: אותו הון ראשוני (<span class="num">507,120 ₪</span>) מושקע במדד בסוף 2010. השוכר משלם שכירות חודשית, ואת ההפרש בין עלות הקונה (<span class="num">7,373 ₪/חודש</span>) לשכירות משקיע בסוף כל חודש ב-S&amp;P 500. כך לשני המסלולים אותו הון התחלתי ואותה הוצאה חודשית כוללת. בתחילת הדרך ההשקעה הנוספת היא כ-<span class="num">3,147 ₪</span> בחודש, וב-2025 כ-<span class="num">2,048 ₪</span> בחודש; סך ההפקדות הנוספות <span class="num">488 אלף ₪</span>.</p>
+<p>השכירות היא <b>אומדן, לא סדרת עסקאות שכירות בשכונה</b>: תשואה ברוטו של 3% לשנה על מחיר הקנייה ב-2010, ואז הצמדה למדד המחירים לצרכן השנתי, לא לשווי הדירה. כ-<span class="num">4,226 ₪/חודש</span> בתחילה ועד כ-<span class="num">5,325 ₪/חודש</span> ב-2025; סך כ-<span class="num">839 אלף ₪</span> ששילם השוכר. ההנחה מעוגנת בסדר גודל של תשואת שכירות תל אביבית של כ-3% שדיווח בנק ישראל, <b>לא מדידה היסטורית מדויקת של נחלת יצחק</b>.</p>
+<p>שווי הדירה בסוף 2025: <span class="num">80 × 42,971 = 3,437,680 ₪</span>; יתרת חוב אחרי 180 תשלומים: <span class="num">616,898 ₪</span>. הון נטו: <span class="num">2,820,782 ₪</span>. זו הצמדה לסדרת חציון מ״ר, לא מעקב אחרי דירה ספציפית; שיפוץ, גיל ותמהיל עסקאות יכולים לשנות את התוצאה.</p>
+</div></details>
+<details><summary>איך חישבנו את הבורסה והשקל?</summary><div class="detail"><p>תשואות S&amp;P 500 שנתיות כולל דיבידנדים מושקעים מחדש לשנים 2011-2025; לצורך הפקדות חודשיות חילקנו כל תשואה שנתית בקירוב גיאומטרי שווה ל-12 חודשים. זו <b>אינטרפולציה</b>, לא מסלול חודשי אמיתי, ולכן ערך ה-DCA עשוי לסטות מעט מהתוצאה בפועל. בכל חודש הומרו השקלים לדולרים בשער החודשי הממוצע היציג של בנק ישראל; השווי הסופי הומר לשקלים בשער דצמבר 2025.</p>
+<p>בסוף 2010 דולר היה <span class="num">3.604 ₪</span>, ובסוף 2025 <span class="num">3.215 ₪</span> לפי ממוצע דצמבר: השקל התחזק בכ-<span class="num">10.8%</span> מול הדולר, ולכן תשואה דולרית לא שווה לתשואה שקלית. האינפלציה הישראלית (בין 2010 ל-2025, על בסיס מדדי השנים שבדף) הייתה כ-<span class="num">26%</span>: בכוח קנייה של 2010 מדובר בכ-<span class="num">3.76 מיליון ₪</span> במדד מול <span class="num">2.24 מיליון ₪</span> הון בדירה. שתי התוצאות חולקו באותו מקדם, ולכן הפער היחסי לא משתנה.</p>
+</div></details>
+<p class="note"><b>רגישות וסיכון:</b> ריבית 4%, תשואת שכירות 3% ואחזקה 0.8% הן הנחות תרחיש, לא שחזור משכנתא או חוזה אמיתי. מסי קנייה/מכירה, מס רווחי הון, דמי ניהול, ביטוחי משכנתא, תיווך, שיפוצים ועלויות המרה עלולים לשנות מהותית את המספרים. אין כאן סיכון נזילות/תנודתיות: התיק ירד בשנים מסוימות, לדוגמה 2022, בעוד מכירת דירה לוקחת זמן. תרחיש אחר, במיוחד תאריך התחלה/סיום אחר, יכול לתת פער אחר.</p>
+<p class="note">מקורות: <a href="https://www.slickcharts.com/sp500/returns">תשואות כוללות S&amp;P 500 לפי שנה</a> · <a href="https://edge.boi.org.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?format=csv&amp;normalisefreq=M;mean&amp;startperiod=2010-01-01&amp;endperiod=2025-12-31">שערי דולר/שקל חודשיים, בנק ישראל</a> · <a href="https://www.boi.org.il/media/jfcpmzgi/chap-9.pdf">בנק ישראל, שוק הדיור, תשואת שכירות בת״א ≈3%</a> · <a href="https://www.boi.org.il/information/interestrates/mortgage/">סדרת ריביות משכנתא של בנק ישראל (4% כאן כהנחת מודל)</a>. מחיר הדירה והמדד כפי שתועדו בחלק הראשון.</p>
+</div>
+<div class="card compare" id="calc">
+<h2>מחשבון: מה היה קורה עם המספרים שלך?</h2>
+<p class="note" style="margin:0 0 12px">שנו את ההנחות והתוצאה מתעדכנת מיד. אותו מודל כמו בסעיף ההשוואה: שני המסלולים מתחילים באותו הון ראשוני ובאותה הוצאה חודשית כוללת, ומי שמשלם פחות על מגורים משקיע את ההפרש במדד. חשבון, לא המלצה.</p>
+<div class="calc-grid">
+<label>הון ראשוני זמין (₪)<input id="cInit" type="number" value="507120" min="0" step="10000" inputmode="numeric"></label>
+<label>מחיר הדירה (₪)<input id="cPrice" type="number" value="1690400" min="0" step="10000" inputmode="numeric"></label>
+<label>מקדמה (% ממחיר הדירה)<input id="cDown" type="number" value="30" min="0" max="100" step="1" inputmode="decimal"></label>
+<label>ריבית משכנתא (% לשנה, קבועה)<input id="cRate" type="number" value="4" step="0.1" inputmode="decimal"></label>
+<label>תקופת משכנתא (שנים)<input id="cTerm" type="number" value="25" min="1" max="40" step="1" inputmode="numeric"></label>
+<label>תקופת הבדיקה (שנים)<input id="cYears" type="number" value="15" min="1" max="40" step="1" inputmode="numeric"></label>
+<label>שכירות: תשואה שנתית (% ממחיר הדירה)<input id="cYield" type="number" value="3" min="0" step="0.1" inputmode="decimal"></label>
+<label>או שכירות חודשית ידנית (₪; 0 = לפי התשואה)<input id="cRent" type="number" value="0" min="0" step="50" inputmode="numeric"></label>
+<label>עליית שכירות (% לשנה)<input id="cRentG" type="number" value="1.5" step="0.1" inputmode="decimal"></label>
+<label>עליית ערך הדירה (% לשנה)<input id="cAptG" type="number" value="4.8" step="0.1" inputmode="decimal"></label>
+<label>תשואת S&amp;P 500 (% לשנה, שקלי)<input id="cSp" type="number" value="13" step="0.5" inputmode="decimal"></label>
+<label>אחזקת דירה (% ממחיר הקנייה לשנה)<input id="cMaint" type="number" value="0.8" min="0" step="0.1" inputmode="decimal"></label>
+</div>
+<div class="calc-res" id="calcRes" aria-live="polite"></div>
+<p class="note" id="calcEcho"></p>
+<p class="note">ברירות המחדל משחזרות בקירוב את תרחיש הדף: דירת 80 מ״ר ב-<span class="num">1,690,400 ₪</span> (מחיר מ״ר של סוף 2010), מקדמה 30%, ריבית 4% ל-25 שנה, שכירות בתשואת 3%, עליית ערך 4.8% לשנה (הקצב הנומינלי בפועל בנחלת יצחק 2010-2025) ותשואה שקלית של 13% ב-S&amp;P 500 (הממוצע בפועל 2011-2025 כולל דיבידנדים ושינויי שער - תקופה חריגה, הממוצע ההיסטורי הארוך נמוך ממנה). המודל מתייחס לתשואה קבועה לאורך כל התקופה, ולא לסדרת התשואות האמיתית, ולכן התוצאה בברירת המחדל קרובה אך לא זהה לחשבון ההיסטורי למעלה. לא נוכו מסים, עמלות, דמי ניהול ועלויות המרה.</p>
 </div>
 
 <div class="card">
@@ -96,5 +149,50 @@ a{color:#1d4ed8}
 <p class="footer">נבנה על-ידי Instinct · 27 בספטמבר 2026 · נתונים: over.org.il / רשות המסים / הלמ"ס</p>
 </div>
 </div>
+<script>
+(function(){
+function $(id){return document.getElementById(id)}
+var ids=['cInit','cPrice','cDown','cRate','cTerm','cYears','cYield','cRent','cRentG','cAptG','cSp','cMaint'];
+function num(id){var v=parseFloat($(id).value);return isFinite(v)?v:0}
+function fmt(x){if(!isFinite(x))return '-';var neg=x<0?'-':'';var a=Math.abs(x);if(a>=1e6)return neg+(a/1e6).toFixed(2)+' מיליון ₪';return neg+Math.round(a).toLocaleString('en-US')+' ₪'}
+function calc(){
+var init=num('cInit'),price=num('cPrice'),downPct=num('cDown'),rate=num('cRate')/100,termY=num('cTerm'),years=num('cYears'),yld=num('cYield')/100,rentManual=num('cRent'),rentG=num('cRentG')/100,aptG=num('cAptG')/100,sp=num('cSp')/100,maintPct=num('cMaint')/100;
+var res=$('calcRes'),echo=$('calcEcho');
+res.innerHTML='';echo.textContent='';
+if(price<=0||years<=0){return}
+var down=price*downPct/100;
+if(init<down){res.innerHTML='<div class="figure"><small>שים לב</small><strong style="color:#b91c1c">ההון הראשוני לא מספיק למקדמה</strong><span>המקדמה הדרושה היא '+fmt(down)+' וההון הזמין '+fmt(init)+'.</span></div>';return}
+var loan=price-down,i=rate/12,n=Math.round(termY*12),T=Math.round(years*12);
+var pmt=n>0?(i>0?loan*i/(1-Math.pow(1+i,-n)):loan/n):0;
+var rent0=rentManual>0?rentManual:price*yld/12;
+var rm=Math.pow(1+sp,1/12)-1,rg=Math.pow(1+rentG,1/12)-1;
+var maint=price*maintPct/12;
+var rent=rent0,pfRent=init,pfBuy=init-down,bal=loan,totRent=0,totMort=0,m;
+for(m=1;m<=T;m++){
+var mort=m<=n?pmt:0;
+var buyCost=mort+maint,depR=0,depB=0;
+if(buyCost>=rent){depR=buyCost-rent}else{depB=rent-buyCost}
+pfRent=pfRent*(1+rm)+depR;
+pfBuy=pfBuy*(1+rm)+depB;
+if(m<=n){bal=bal*(1+i)-pmt;if(bal<0)bal=0;totMort+=mort}
+totRent+=rent;rent=rent*(1+rg);
+}
+var aptVal=price*Math.pow(1+aptG,years);
+var buyEq=aptVal-bal+pfBuy;
+var gap=pfRent-buyEq;
+var lead;
+if(Math.abs(gap)<1){lead='שני המסלולים מסתיימים כמעט באותה נקודה.'}
+else if(gap>0){lead='בתרחיש הזה מסלול <b>השכירות וההשקעה</b> מסיים עם כ-<b>'+fmt(gap)+' יותר</b>.'}
+else{lead='בתרחיש הזה מסלול <b>קניית הדירה</b> מסיים עם כ-<b>'+fmt(-gap)+' יותר</b>.'}
+res.innerHTML='<div class="compare-grid">'
++'<div class="figure"><small>שוכר + משקיע במדד</small><strong>'+fmt(pfRent)+'</strong><span>שווי התיק אחרי תשלום שכירות לאורך כל התקופה</span></div>'
++'<div class="figure"><small>קונה + גר בדירה</small><strong>'+fmt(buyEq)+'</strong><span>שווי דירה ('+fmt(aptVal)+') פחות יתרת משכנתא ('+fmt(bal)+')'+(pfBuy>1?' ועוד קרן צד של '+fmt(pfBuy):'')+'</span></div>'
++'</div><p class="lead" style="margin:4px 0 0">'+lead+'</p>';
+echo.textContent='החזר משכנתא חודשי: '+fmt(pmt)+' · שכירות חודשית ראשונה: '+fmt(rent0)+' · סך שכירות ששולמה: '+fmt(totRent)+' · סך החזרי משכנתא בתקופה: '+fmt(totMort)+'. תשואות מורכבות חודשית; ההפרש החודשי בין עלויות המגורים מושקע במדד אצל מי שמשלם פחות.';
+}
+for(var k=0;k<ids.length;k++){(function(id){$(id).addEventListener('input',calc)})(ids[k])}
+calc();
+})();
+</script>
 </body>
 </html>
